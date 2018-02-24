@@ -16,9 +16,8 @@ while input != "Exit".downcase
   game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
 	if input == "0"
     until game.won?
-		    
         game.play
-      end 
+      end
 	elsif input == "1"
 		game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
 		game.play until game.won?
