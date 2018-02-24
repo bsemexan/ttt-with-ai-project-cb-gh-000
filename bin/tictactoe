@@ -7,7 +7,7 @@ puts "Select which game you want to play"
 puts "Enter 0 for no human players"
 puts "Enter 1 for one human player"
 puts "Enter 2 for two human players"
-puts "exit to stop playing"
+puts "Exit to stop playing"
 
 input = ""
 
