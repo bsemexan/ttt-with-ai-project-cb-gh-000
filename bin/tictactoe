@@ -7,12 +7,12 @@ puts "Select which game you want to play"
 puts "Enter 0 for no human players"
 puts "Enter 1 for one human player"
 puts "Enter 2 for two human players"
-puts "Exit"
+puts "exit to stop playing"
 
 input = ""
 
 while input != "Exit"
-	input = gets.strip 
+	input = gets.strip
 	if input == "0"
 		game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
 		game.play
