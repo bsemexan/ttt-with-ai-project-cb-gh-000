@@ -3,18 +3,26 @@
 require_relative '../config/environment'
 
 puts "Welcome to Tic Tac Toe!"
-game = Game.new
-until game.won?
-  game.play
-end
+puts "Select which game you want to play"
+puts "Enter 0 for no human players"
+puts "Enter 1 for one human player"
+puts "Enter 2 for two human players"
+puts "Exit"
 
-play_again = ""
-until play_again.downcase == "n" || play_again.downcase == "no"
-  puts "Would you like to play again?"
-  play_again = gets.strip
-  play_again.downcase == "y" || play_again.downcase == "yes"
-  game = Game.new
-  until game.won?
-    game.play
-  end
+input = ""
+
+while input != "Exit"
+	input = gets.strip 
+	if input == "0"
+		game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
+		game.play
+	elsif input == "1"
+		game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+		game.play
+	elsif input == "2"
+		game = Game.new
+		game.play
+	else
+		puts "Invalid input"
+	end
 end
