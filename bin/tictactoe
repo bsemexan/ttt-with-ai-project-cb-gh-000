@@ -23,7 +23,7 @@ while input != "Exit".downcase
 		game.play until game.over?
 	elsif input == "2"
 		game = Game.new
-		game.play until game.won?
+		game.play until game.over?
 	else
 		puts "Invalid input"
 	end
