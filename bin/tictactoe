@@ -15,10 +15,10 @@ while input != "Exit".downcase
 	input = gets.strip
 	if input == "0"
 		game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
-		game.play
+    game.play until game.won?
 	elsif input == "1"
 		game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
-		game.play
+		game.play until game.won?
 	elsif input == "2"
 		game = Game.new
 		game.play
