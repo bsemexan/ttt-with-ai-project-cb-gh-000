@@ -11,7 +11,7 @@ puts "Exit to stop playing"
 
 input = ""
 
-while input != "Exit"
+while input != "Exit".downcase
 	input = gets.strip
 	if input == "0"
 		game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
